@@ -2,6 +2,9 @@ import pygame
 import numpy as np
 from math import *
 
+
+# https://www.youtube.com/watch?v=qw0oY6Ld-L0
+
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 BLACK = (0, 0, 0)
