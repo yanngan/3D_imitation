@@ -12,7 +12,7 @@ def main() -> int:
     for img_name in img_names:
         try:
             eyes_coordinates = eyes_detector.eyes_detect(img_name)
-            frame.Frame.resetTaitBryanAngles
+            frame.Frame.resetTaitBryanAngles()
         except Exception as inst:
             print(inst)
     while 1:
