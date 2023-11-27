@@ -56,8 +56,8 @@ class Frame:
         self.points = [np.matrix([-1, -1, 1]), np.matrix([1, -1, 1]), np.matrix([1, 1, 1]), np.matrix([-1, 1, 1]),
                        np.matrix([-1, -1, -1]), np.matrix([1, -1, -1]), np.matrix([1, 1, -1]), np.matrix([-1, 1, -1])]
         self.projection_matrix = np.matrix([
-            [-1, 0, 0],
-            [0, -1, 0]
+            [1, 0, 0],
+            [0, 1, 0]
         ])
         self.projected_points = [
             [n, n] for n in range(len(self.points))
@@ -102,7 +102,7 @@ class Frame:
         # z_angle = numpy.arctan(abs(y_screen)/abs(z_screen))
 
         self.angle_x = np.arctan(np.sqrt(y_screen**2 + z_screen**2)/x_screen)
-        self.angle_y = - np.arctan(np.sqrt(x_screen**2 + z_screen**2)/y_screen)
+        self.angle_y = np.arctan(np.sqrt(x_screen**2 + z_screen**2)/y_screen)
         self.angle_z = np.arctan(np.sqrt(x_screen**2 + y_screen**2)/z_screen)
 
         # self.angle_x = radians(x_angle)#*10
